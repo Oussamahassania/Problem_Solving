@@ -2,28 +2,28 @@ import java.util.Scanner;
 
 public class SearchInMatrix {
     public static void main(String[]args){
-        Scanner sc = new Scanner(System.in);
-        int rows = sc.nextInt();
-        int cols = sc.nextInt();
-        int[][] matrix = new int[rows][cols];
-        for (int r=0;r<rows;r++){
-            for (int c=0;c<cols;c++){
-                matrix[r][c] = sc.nextInt();
-            };
+        Scanner in = new Scanner(System.in);
+        int c = in.nextInt();
+        int r = in.nextInt();
+        int [][]matrix = new int[r][c];
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                matrix[i][j] = in.nextInt();
+            }
         }
-        int number = sc.nextInt();
-        int count=0;
-        for (int r=0;r<rows;r++){
-            for (int c=0;c<cols;c++){
-           if (number == matrix[r][c]){
-               count++;
-           }
-            };
+        int counter=0;
+        int number  = in.nextInt();
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                if(number == matrix[i][j]){
+                    counter++;
+                }
+            }
         }
-        if (count > 0){
-            System.out.println("will not take number");
+        if(counter>0){
+            System.out.println("Will not take the number");
         }else{
-            System.out.println(" will take number");
+            System.out.println("Will take the number");
         }
 
     }
